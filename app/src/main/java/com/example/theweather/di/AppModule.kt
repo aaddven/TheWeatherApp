@@ -2,6 +2,7 @@ package com.example.theweather.di
 
 import android.content.Context
 import androidx.room.Room
+import com.example.theweather.network.GeocodingApi
 import com.example.theweather.network.WeatherApi
 import com.example.theweather.utils.Constants
 import dagger.Module
@@ -18,16 +19,23 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class AppModule {
 
-
-
-
     @Provides
     @Singleton
     fun provideOpenWeatherApi(): WeatherApi{
         return Retrofit.Builder()
-               .baseUrl(Constants.BASE_URL)
+               .baseUrl(Constants.WEATHER_BASE_URL)
                .addConverterFactory(GsonConverterFactory.create())
                .build()
                .create(WeatherApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGeocoderApi(): GeocodingApi {
+        return Retrofit.Builder()
+            .baseUrl(Constants.GEOCODING_BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(GeocodingApi::class.java)
     }
 }

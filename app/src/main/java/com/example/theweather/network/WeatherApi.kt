@@ -1,7 +1,6 @@
 package com.example.theweather.network
 
-import com.example.theweather.model.ApiObject
-import com.example.theweather.model.WeatherObject
+import com.example.theweather.model.Weather.WeatherApiResponse
 import com.example.theweather.utils.Constants
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -13,6 +12,6 @@ interface WeatherApi {
     suspend fun getWeather(@Query("lat") query1: Double,
                            @Query("lon") query2: Double,
                            @Query("units") units: String = "metric",
-                           @Query("appid") appid: String = Constants.API_KEY
-                          ): ApiObject
+                           @Query("appid") appid: String = Constants.WEATHER_API_KEY
+                          ): WeatherApiResponse
 }

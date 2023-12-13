@@ -1,6 +1,6 @@
-package com.example.theweather.model
+package com.example.theweather.model.Weather
 
-data class ApiObject(
+data class WeatherApiResponse(
     val city: City,
     val cnt: Int,
     val cod: String,

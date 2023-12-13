@@ -46,7 +46,7 @@ fun WeatherSplashScreen(navController: NavController){
                 }))
 
             delay(1500L)
-            navController.navigate(WeatherScreens.MainScreen.name)
+            navController.navigate(WeatherScreens.SearchScreen.name)
     } )
 
 

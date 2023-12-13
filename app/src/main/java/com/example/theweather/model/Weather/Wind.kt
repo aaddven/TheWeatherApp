@@ -1,4 +1,4 @@
-package com.example.theweather.model
+package com.example.theweather.model.Weather
 
 data class Wind(
     val deg: Int,

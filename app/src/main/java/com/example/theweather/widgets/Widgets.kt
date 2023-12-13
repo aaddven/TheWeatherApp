@@ -28,8 +28,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.example.theweather.R
-import com.example.theweather.model.City
-import com.example.theweather.model.WeatherItem
+import com.example.theweather.model.Weather.City
+import com.example.theweather.model.Weather.WeatherItem
 import com.example.theweather.utils.formatDate
 import com.example.theweather.utils.formatDateTime
 import com.example.theweather.utils.formatDecimals
